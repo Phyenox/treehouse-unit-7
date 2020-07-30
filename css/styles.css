@@ -1,24 +1,67 @@
-* {
+body {
     margin: auto 0;
+    box-sizing: border-box;
+}
+
+/* ============= grid container ========== */
+
+.grid-container {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+      "header",
+      "nav",
+      "main";
+}
+
+header {
+    grid-area: header;
+}
+
+nav {
+    grid-area: nav;
+}
+
+main {
+    grid-area: main;
+}
+
+.widget-container-full, .widget-container-half {
+    width: 95vw;
+}
+
+main {
+    display: grid;
+}
+
+/* =========== Main body =========== */
+
+main {
+  background-color: white;
+  margin-top: 103px;
 }
 
 /* =========== Main Header Bar =========== */
 
-.main-nav {
+.header {
     width: 100%;
-    background-color: rgb(82, 79, 246);
+    background-color: rgb(99, 127, 194);
     display: flex;
-    justify-content: space-around;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
-.nav {
-    display: flex;
-    background-color: rgb(87, 18, 87);
+.header span {
+    color: rgb(218, 216, 216);
+    font-weight: 100;
 }
 
 .your-app {
-    width: 65%;
-    padding-left: 10px;
+    width: 50%;
+    padding-left: 5px;
     text-align: left;
     font-size: 20px;
     color: white;
@@ -28,6 +71,7 @@
     display: flex;
     flex-direction: row;
     padding: 10px;
+    margin-top: 5px;
     width: 20px;
     height: 20px;
     border-right: 1px solid rgb(175, 175, 175); 
@@ -37,34 +81,104 @@
     border-radius: 50%;
     width: 30px;
     height: 30px;
-    padding: 5px; 
+    padding: 0 5px;
+    margin-top: 10px;
 }
 
 .profile-name {
     text-align: center;
     font-weight: 100;
     color: white; 
-    padding-right: 10px;
     font-size: 15px;
-}
+    margin-right: 4px;
+} 
 
 /* =========== Navigation Bar =========== */
 
 .nav {
     display: flex;
-    flex-direction: row;
     justify-content: center;
+    height: 55px;
+    width: 100%;
+    background-color: rgb(123, 81, 156);
 }
 
-.nav-board {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    width: 40px;
+.nav img {
     height: 40px;
-    padding: 10px;
+    width: 50px;
+    padding: 6px;
 }
 
-/* ===========  =========== */
+/* =========== DashBoard with search bar =========== */
+
+.main-header {
+    display: flex;
+    align-items: center;
+    background-color: rgb(241, 240, 238);  
+}
+
+.headline {
+    width: 30%;
+    margin: 0;
+    padding: 10px;
+    background-color: white;
+}
+
+.main-header-search {
+    width: 70%; 
+    text-align: right;
+    padding-right: 10px;
+}
+
+.main-header input {
+    width: 60%; 
+} 
+
 
 /* ===========  =========== */
+
+.social-image {
+    height: 60px;
+    width: 60px;
+  }
+
+/* ===========  =========== */
+
+/* =========== Media Query 768px =========== */
+
+@media (min-width: 768px) {
+  .grid-container {
+      grid-template-columns: 55px 1fr;
+      grid-template-areas: 
+        "header header",
+        "nav main";
+  }
+  .main {
+      grid-template-columns: 50%;
+  }
+  .traffic, .socail {
+      grid-column: 1 / span 2;
+  }
+  .daily, .members, .message {
+      grid-column: 1 / span 1;
+  }
+  .mobile, .activity, .settings {
+      grid-column: 2 / span 1;
+  }
+
+  .widget-container-full {
+      width: 90vw;
+  }
+  .widget-container-half {
+      width: 45vw;
+  }
+
+  /* .nav {
+      flex-direction: column;
+  } */
+
+
+}
+
+
+
