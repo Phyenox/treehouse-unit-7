@@ -71,35 +71,35 @@ let trafficChart = new Chart(trafficCanvas, {
 
 // Loading Traffic Charts
 
-let trafficTime = document.getElementsByClassName("traffic-nav")[0];
-trafficTime.addEventListener("click", (e) => {
-  let selectedTime = e.target.innerHTML;
-  if (selectedTime === "Hourly") {
-    let trafficChart = new Chart(trafficCanvas, {
-      type: "line",
-      data: trafficData1,
-      options: trafficOptions,
-    });
-  } else if (selectedTime === "Daily") {
-    let trafficChart = new Chart(trafficCanvas, {
-      type: "line",
-      data: trafficData2,
-      options: trafficOptions,
-    });
-  } else if (selectedTime === "Weekly") {
-    let trafficChart = new Chart(trafficCanvas, {
-      type: "line",
-      data: trafficData3,
-      options: trafficOptions,
-    });
-  } else if (selectedTime === "Monthly") {
-    let trafficChart = new Chart(trafficCanvas, {
-      type: "line",
-      data: trafficData4,
-      options: trafficOptions,
-    });
-  }
-});
+// let trafficTime = document.getElementsByClassName("traffic-nav")[0];
+// trafficTime.addEventListener("click", (e) => {
+//   let selectedTime = e.target.innerHTML;
+//   if (selectedTime === "Hourly") {
+//     let trafficChart = new Chart(trafficCanvas, {
+//       type: "line",
+//       data: trafficData1,
+//       options: trafficOptions,
+//     });
+//   } else if (selectedTime === "Daily") {
+//     let trafficChart = new Chart(trafficCanvas, {
+//       type: "line",
+//       data: trafficData2,
+//       options: trafficOptions,
+//     });
+//   } else if (selectedTime === "Weekly") {
+//     let trafficChart = new Chart(trafficCanvas, {
+//       type: "line",
+//       data: trafficData3,
+//       options: trafficOptions,
+//     });
+//   } else if (selectedTime === "Monthly") {
+//     let trafficChart = new Chart(trafficCanvas, {
+//       type: "line",
+//       data: trafficData4,
+//       options: trafficOptions,
+//     });
+//   }
+// });
 
 // Traffic Bar Graph
 
