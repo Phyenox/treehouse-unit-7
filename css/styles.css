@@ -98,6 +98,7 @@ main {
 .nav {
     display: flex;
     justify-content: center;
+    margin-top: 50px;
     height: 55px;
     width: 100%;
     background-color: rgb(123, 81, 156);
@@ -134,13 +135,32 @@ main {
     width: 60%; 
 } 
 
+/* =========== Social Media Section =========== */
 
-/* ===========  =========== */
+.social {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+}
 
-.social-image {
-    height: 60px;
-    width: 60px;
+.social-container {
+    margin: 2px;
+    padding: 5px;
+    width: 90%;
+    border: 1px solid rgb(175, 175, 175);
+    background-color:  rgb(241, 240, 238);
+    border-radius: 5px;
+}
+
+.social-image { 
+    height: 30px;
+    width: 30px;
+    padding: 15px;
+    background-color: rgb(123, 81, 156);
+    border-radius: 50%;
+    margin: 0 auto;
   }
+
 
 /* ===========  =========== */
 
@@ -173,10 +193,14 @@ main {
       width: 45vw;
   }
 
-  /* .nav {
-      flex-direction: column;
-  } */
-
+  .nav {
+    justify-content: flex-start;
+    flex-direction: column;
+    position: fixed;
+    margin-top: 0;
+    height: 100%;
+    width: 55px;
+  }
 
 }
 
