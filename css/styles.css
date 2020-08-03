@@ -2,6 +2,17 @@ body {
     margin: auto 0;
     box-sizing: border-box;
 }
+/* =========== Colors =========== */
+
+:root {
+    --base-color:  white;
+    --primary-color: rgb(99, 127, 194); 
+    --primary-color-light: ;  
+    --secondary-color:  rgb(123, 81, 156);
+    --boarder-color: rgb(175, 175, 175);
+    --light-backing-color: rgb(241, 240, 238);
+    --alert-banner-color: rgb(211, 238, 246);
+}
 
 /* ============= grid container ========== */
 
@@ -37,25 +48,26 @@ main {
     display: grid;
 }
 
-/* =========== Main body =========== */
+/* =========== Main =========== */
 
 main {
-  background-color: white;
+  background-color: var(--base-color);
   margin-top: 103px;
 }
 
-/* =========== Main Header Bar =========== */
+
+/* =========== Header Bar =========== */
 
 .header {
     width: 100%;
-    background-color: rgb(99, 127, 194);
+    background-color: var(--primary-color);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
 .header span {
-    color: rgb(218, 216, 216);
+    color: var(--light-backing-color);
     font-weight: 100;
 }
 
@@ -64,7 +76,7 @@ main {
     padding-left: 5px;
     text-align: left;
     font-size: 20px;
-    color: white;
+    color: var(--base-color);
 }
 
 .bell {
@@ -74,7 +86,7 @@ main {
     margin-top: 5px;
     width: 20px;
     height: 20px;
-    border-right: 1px solid rgb(175, 175, 175); 
+    border-right: 1px solid var(--boarder-color); 
 }
 
 .profile-img {
@@ -88,7 +100,7 @@ main {
 .profile-name {
     text-align: center;
     font-weight: 100;
-    color: white; 
+    color: var(--base-color); 
     font-size: 15px;
     margin-right: 4px;
 } 
@@ -99,15 +111,16 @@ main {
     display: flex;
     justify-content: center;
     margin-top: 50px;
+    padding-top: 7px;
     height: 55px;
     width: 100%;
-    background-color: rgb(123, 81, 156);
+    background-color: var(--secondary-color);
 }
 
 .nav img {
-    height: 40px;
+    height: 30px;
     width: 50px;
-    padding: 6px;
+    padding: 5px 2px;
 }
 
 /* =========== DashBoard with search bar =========== */
@@ -115,14 +128,14 @@ main {
 .main-header {
     display: flex;
     align-items: center;
-    background-color: rgb(241, 240, 238);  
+    background-color: var(--light-backing-color);  
 }
 
 .headline {
     width: 30%;
     margin: 0;
     padding: 10px;
-    background-color: white;
+    background-color: var(--base-color);
 }
 
 .main-header-search {
@@ -135,34 +148,89 @@ main {
     width: 60%; 
 } 
 
+/* =========== Alert Banner =========== */
+
+.alert-banner {
+    width: 95%;
+    margin: 0 auto;
+    margin-top: 15px;
+    padding-left: 5px;
+    border-radius: 5px;
+    border: 1px solid var(--boarder-color);
+    background-color: var(--alert-banner-color);
+}
+
+.alert-banner p {
+    margin: 5px 0;
+}
+
+.alert-banner-close {
+    text-align: right;
+    padding-right: 5px;
+    margin-top: 0;
+}
+
+/* =========== Traffic Section =========== */
+
+.traffic {
+    display: flex;
+    flex-direction: row;
+}
+
+.traffic-nav {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+}
+
+.traffic-nav-link {
+  padding: 5px;
+}
+
 /* =========== Social Media Section =========== */
 
 .social {
     display: flex;
-    flex-direction: row;
-    text-align: center;
+    flex-direction: column;
 }
 
 .social-container {
     margin: 2px;
-    padding: 5px;
-    width: 90%;
-    border: 1px solid rgb(175, 175, 175);
-    background-color:  rgb(241, 240, 238);
+    display: flex;
+    flex-direction: row;
+    border: 1px solid var(--boarder-color);
+    background-color: var(--light-backing-color);
     border-radius: 5px;
 }
 
 .social-image { 
+    align-self: center;
+    margin: 5px 10px;
     height: 30px;
     width: 30px;
-    padding: 15px;
-    background-color: rgb(123, 81, 156);
+    padding: 10px;
+    background-color: var(--secondary-color);
     border-radius: 50%;
-    margin: 0 auto;
   }
 
+.social-text {
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+}
 
-/* ===========  =========== */
+.social-text p:nth-of-type(1) {
+    font-size: medium;
+    font-weight: bold;
+    padding-right: 50px;
+    color: var(--secondary-color);
+}
+
+.social-text p:nth-of-type(2) {
+    font-size: 30px;
+    padding-top: 10px;
+    margin: 0;
+}
 
 /* =========== Media Query 768px =========== */
 
