@@ -1,7 +1,12 @@
 body {
-    margin: auto 0;
+    width: 100%;
     box-sizing: border-box;
 }
+
+main {
+    margin-left: 5px;
+}
+
 /* =========== Colors =========== */
 
 :root {
@@ -63,7 +68,12 @@ main {
     background-color: var(--primary-color);
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+}
+
+.flex-right {
+    display: flex;
+    flex-direction: row;    
+    margin-left: auto;
 }
 
 .header span {
@@ -72,9 +82,7 @@ main {
 }
 
 .your-app {
-    width: 50%;
     padding-left: 5px;
-    text-align: left;
     font-size: 20px;
     color: var(--base-color);
 }
@@ -102,7 +110,7 @@ main {
     font-weight: 100;
     color: var(--base-color); 
     font-size: 15px;
-    margin-right: 4px;
+    margin-right: 5px;
 } 
 
 /* =========== Navigation Bar =========== */
@@ -112,7 +120,7 @@ main {
     justify-content: center;
     margin-top: 50px;
     padding-top: 7px;
-    height: 55px;
+    height: 45px;
     width: 100%;
     background-color: var(--secondary-color);
 }
@@ -168,6 +176,7 @@ main {
     text-align: right;
     padding-right: 5px;
     margin-top: 0;
+    cursor: pointer;
 }
 
 /* =========== Traffic Section =========== */
@@ -180,12 +189,21 @@ main {
 .traffic-nav {
     display: flex;
     flex-direction: row;
+    margin-left: auto;
+    padding-right: 10px;
     list-style-type: none;
 }
 
 .traffic-nav-link {
   padding: 5px;
+  cursor: pointer;
 }
+
+/* .traffic-nav-link:target {
+    background-color: rgb(175, 219, 175);
+    border-radius: 5px;
+} */
+
 
 /* =========== Social Media Section =========== */
 
@@ -195,6 +213,7 @@ main {
 }
 
 .social-container {
+    width: 97%;
     margin: 2px;
     display: flex;
     flex-direction: row;
@@ -232,11 +251,49 @@ main {
     margin: 0;
 }
 
+/* =========== New Members Section =========== */
+
+.members-container {
+    display: flex;
+    flex-direction: row;
+    padding: 10px 0 10px 5px; 
+    margin-right: 5px;
+    border: 1px solid var(--light-backing-color);
+}
+
+.members-text {
+    padding-left: 5px;
+}
+
+.members-text p{
+    margin: 5px 0;
+}
+
+.members-container p:nth-last-child(1) {
+    display: flex;
+    flex-direction: row;    
+    margin-left: auto;
+    font-size: small;
+    margin-right: 5px;
+}
+
+.members-container img {
+    align-self: center;
+    border-radius: 50%;
+    height: 45px;
+    width: 45px;
+    padding-right: 5px;
+} 
+
+/* =========== Message User Section =========== */
+
+
+
 /* =========== Media Query 768px =========== */
 
 @media (min-width: 768px) {
   .grid-container {
-      grid-template-columns: 55px 1fr;
+      grid-template-columns: 55px fr;
       grid-template-areas: 
         "header header",
         "nav main";
@@ -244,7 +301,7 @@ main {
   .main {
       grid-template-columns: 50%;
   }
-  .traffic, .socail {
+  .traffic, .social {
       grid-column: 1 / span 2;
   }
   .daily, .members, .message {
