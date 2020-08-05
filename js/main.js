@@ -34,3 +34,7 @@ send.addEventListener('click', () => {
     alert(`Message successfully sent to: ${user.value}`)
   }
 });
+
+// Traffic buttons 
+
+const trafficBtn = document.getElementsByClassName(".traffic-nav-link");
