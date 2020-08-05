@@ -1,6 +1,6 @@
 //   Alert Banner
 
-const alertBanner = document.getElementById("alert");
+let alertBanner = document.getElementById("alert");
 
 // Create HTML for the banner
 
@@ -13,7 +13,7 @@ alertBanner.innerHTML =
  alertBanner.addEventListener('click', e => {
   const element = e.target;
   if(element.classList.contains("alert-banner-close")) {
-    alert.style.display = "none"
+    alertBanner.style.display = "none"
   }
  });
 

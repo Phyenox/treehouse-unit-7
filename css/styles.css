@@ -164,8 +164,9 @@ main {
 /* =========== Alert Banner =========== */
 
 .alert-banner {
+    display: flex;
+    flex-direction: row;
     width: 95%;
-    margin: 0 auto;
     margin-top: 15px;
     padding-left: 5px;
     border-radius: 5px;
@@ -174,13 +175,11 @@ main {
 }
 
 .alert-banner p {
-    margin: 5px 0;
+    margin: 7px;
 }
 
 .alert-banner-close {
-    text-align: right;
-    padding-right: 5px;
-    margin-top: 0;
+    margin-left: auto;
     cursor: pointer;
 }
 
@@ -313,12 +312,12 @@ main {
 
 .message {
     border: 1px solid var(--light-backing-color);
-    margin-bottom: 15px;
 }
 
 .message h3,
 .widget-container {
     margin-left: 25px;
+    padding-bottom: 15px;
 }
 
 .widget-container {
@@ -353,6 +352,20 @@ main {
 
 .widget-container button:hover {
     background-color: rgb(143, 21, 173);
+}
+/* =========== Settings Section =========== */
+
+.settings {
+    border: 1px solid var(--light-backing-color);
+    padding: 15px;
+}
+
+.form-field {
+    width: 85%; 
+    height: 30px;
+    border: 1px solid var(--boarder-color);
+    border-radius: 5px;
+    margin-bottom: 10px;
 }
 
 
