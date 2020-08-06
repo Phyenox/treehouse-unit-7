@@ -35,6 +35,3 @@ send.addEventListener('click', () => {
   }
 });
 
-// Traffic buttons 
-
-const trafficBtn = document.getElementsByClassName(".traffic-nav-link");

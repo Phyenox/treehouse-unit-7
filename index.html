@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/switch.css">
     <title>Document</title>
 </head>
 <body class="grid-container">
@@ -238,27 +239,19 @@
     <!-- Loacl Settings Widget -->
     <section class="settings">
       <h3>Settings</h3>
-        <div class="settings-switch">
-          <div class="switch1">
-            <label class="light-switch" onclick="">
-              <input class="switch" type="checkbox" id="email-switch"><strong>Send Email notification</strong>
-              <span class="span-switch">
-                <span>Off</span>
-                <span>On</span>
-                <a></a>
-              </span>
-            </label>
-          </div>
-          <div class="switch2">
-            <label class="light-switch" onclick="">
-              <input class="switch" type="checkbox" id="proflie-switch"><strong>Set profile to public</strong>
-              <span class="span-switch">
-                <span>Off</span>
-                <span>On</span>
-                <a></a>
-              </span>
-            </label>
-          </div>          
+        <div class="btn-1">
+            <div class="checkbox">
+              <input class="checkbox-input" type="checkbox" id="email-notifications">
+              <label for="checkbox-input" class="switch" onclick=""></label>
+            </div>
+              <p>Send Email notifications</p>
+        </div>
+        <div class="btn-2">
+            <div class="checkbox">
+              <input class="checkbox-input" type="checkbox" id="profile-settings">
+              <label for="checkbox-input" class="switch" onclick=""></label>
+            </div>
+              <p>Set Profile to Public</p>
         </div>
 
       <select class="form-field" id="timezone">
@@ -273,8 +266,8 @@
       </select>
       <!-- button container -->
       <div class="setting-button">
-        <button class="button-primary" id="save">Save</button>
-        <button class="button-disabled" id="cancel">Cancel</button>
+        <button class="button-save" id="save">Save</button>
+        <button class="button-cancel" id="cancel">Cancel</button>
       </div>
     </section>
 

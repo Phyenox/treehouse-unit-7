@@ -183,6 +183,12 @@ main {
     cursor: pointer;
 }
 
+/* =========== Charts =========== */
+
+#traffic-chart {
+    width:95vw;
+}
+
 /* =========== Traffic Section =========== */
 
 .traffic {
@@ -360,6 +366,13 @@ main {
     padding: 15px;
 }
 
+.btn-1,
+.btn-2 {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-right: auto;
+}  
+
 .form-field {
     width: 85%; 
     height: 30px;
@@ -367,6 +380,8 @@ main {
     border-radius: 5px;
     margin-bottom: 10px;
 }
+
+
 
 
 /* =========== Media Query 768px =========== */

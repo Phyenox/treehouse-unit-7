@@ -1,0 +1,59 @@
+
+.settings {
+    display: flex;
+    flex-direction: column;
+}
+
+.checkbox {
+    position: relative;
+    height: 25px;
+    width: 70px;
+    background-color: rgb(123, 81, 156);
+    border-radius: 20px;
+}
+
+.checkbox-input {
+   position: absolute; 
+   height: 100%;
+   width: 100%;
+   outline: none;
+   z-index: 2;
+   -webkit-appearance: none;
+}
+
+.checkbox::before,.checkbox::after {
+    position: absolute;
+    font-size: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-weight: bold;
+}
+
+.checkbox::before {
+    content: "ON";
+    color: white;
+    left: 10px;
+}
+
+.checkbox::after {
+    content: "OFF";
+    color: white;
+    right: 10px;
+}
+
+.checkbox label {
+  position: absolute;
+  height: 85%;
+  width: 30px;
+  background: linear-gradient(to bottom, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+  border-radius: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 4px;
+  z-index: 1;
+  transition: 0.2s linear;
+}
+
+.checkbox-input:checked + label{
+  left: calc(100% - 34px);
+}
