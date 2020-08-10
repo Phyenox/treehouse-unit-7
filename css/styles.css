@@ -527,27 +527,11 @@ main {
     padding:  20px 7px;
   }
 
-  /* Alert and Dashboard */
+  /* Dashboard and Alert */
 
-  /* .alert-banner {
-    display: flex;
-    flex-direction: row;
-    width: 95%;
-    margin-top: 15px;
-    padding-left: 5px;
-    border-radius: 5px;
-    border: 1px solid var(--boarder-color);
-    background-color: var(--alert-banner-color);
-}
-
-.alert-banner p {
-    margin: 7px;
-}
-
-.alert-banner-close {
-    margin-left: auto;
-    cursor: pointer;
-} */
+  .alert-banner {
+      padding: 7px;
+  }
 
   main {
       margin-top: 98px;
@@ -651,12 +635,45 @@ main {
       padding-left: 25px;
   }
 
+  .daily h3,
+  .mobile h3 {
+      padding-bottom: 15px;
+  }
 
+  .traffic {
+      padding-top: 15px;
+      padding-bottom: 15px;
+  }
+
+  .widget-container-full canvas {
+      min-width: 600px;
+      min-height: 120px;
+  }
+
+  .widget-container-half canvas{
+    min-width: 300px;
+    min-height: 90px;
+}
+
+/* =========== Media Query 1024px =========== */
 
 }
 
 @media (min-width: 1024px) {
 
+    .widget-container-full canvas {
+        min-width: 850px;
+        min-height: 270px;
+    }
+
+    .widget-container-half canvas{
+        min-width: 450px;
+        min-height: 170px;
+    }
+
+    body {
+        max-width: 100%;
+    }
 }
 
 
