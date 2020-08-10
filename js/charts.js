@@ -2,8 +2,6 @@
 //   Chart Widgets
 // -----------------------------------------------------------
 
-// Chart.default.global.animation.duration = 2000;
-
 // Traffic Line Graph
 // Hourly
 const trafficCanvas = document.getElementById("traffic-chart");
