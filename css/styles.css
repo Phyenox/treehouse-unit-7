@@ -2,15 +2,6 @@
     box-sizing: border-box;
 }
 
-body {
-    width: 100%;
-    min-width: 0;
-}
-
-main {
-    
-}
-
 h3 {
     text-transform: uppercase;
     font-size: medium;
@@ -20,8 +11,7 @@ h3 {
 
 :root {
     --base-color:  white;
-    --primary-color: rgb(96, 74, 136); 
-    --primary-color-light: ;  
+    --primary-color: rgb(96, 74, 136);   
     --secondary-color:  #7477BF;
     --boarder-color: rgb(175, 175, 175);
     --grid-border-color: rgb(189, 189, 189);
@@ -66,11 +56,10 @@ main {
 
 /* =========== Main =========== */
 
-main {
+/* main {
   background-color: var(--base-color);
   
-}
-
+} */
 
 /* =========== Header Bar =========== */
 
@@ -210,10 +199,6 @@ main {
     
 }
 
-#traffic-chart {
-    
-}
-
 .traffic {
     display: flex;
     flex-direction: row;
@@ -244,18 +229,22 @@ main {
     border-radius: 5px;
 }
 
+.widget-container-full,
+.daily,
+.mobile {
+    padding: 10px 0 15px 25px;
+}
+
 /* =========== Social Media Section =========== */
 
 .social {
     display: flex;
     flex-direction: column;
-    margin-bottom: 15px;
-    padding-top: 15px;
-    padding-left: 10px;
+    padding: 0 0 15px 15px;
 }
 
 .social-container {
-    width: 97%;
+    width: 95%;
     margin: 5px 0;
     display: flex;
     flex-direction: row;
@@ -267,8 +256,8 @@ main {
 .social-image { 
     align-self: center;
     margin: 5px 10px;
-    height: 30px;
-    width: 30px;
+    width: 45px;
+    height: 45px;
     padding: 10px;
     background-color: var(--secondary-color);
     border-radius: 50%;
@@ -277,13 +266,13 @@ main {
 .social-text {
     display: flex;
     flex-direction: row;
-    margin: 0 auto;
 }
 
 .social-text p:nth-of-type(1) {
     font-size: medium;
     font-weight: bold;
     padding-right: 50px;
+    padding-left: 10px;
     color: var(--secondary-color);
 }
 
@@ -340,16 +329,15 @@ main {
 .activity-container img {
     align-self: center;
     border-radius: 50%;
+    margin: 0 5px 5px 10px;
     height: 45px;
     width: 45px;
-    padding: 5px 15px;
 } 
 
 .members-container:nth-last-child(1),
 .activity-container:nth-last-child(1) {
     border: none;
 }
-
 
 /* =========== Message User Section =========== */
 
@@ -407,13 +395,13 @@ main {
     padding: 15px 0 25px 10px;
 }
 
-.btn-1,
+/* .btn-1,
 .btn-2 {
     display: flex;
     flex-direction: row-reverse;
     margin-right: auto;
     margin-left: 10px;
-}  
+}   */
 
 .form-field {
     width: 85%; 
@@ -445,9 +433,10 @@ main {
 
 @media (min-width: 768px) {
   .grid-container {
-      grid-template-columns: minmax(auto-fit, 1fr);
+      grid-template-columns: minmax(70px, 70px)
+        minmax(0, 1fr);
       grid-template-areas: 
-        "header header",
+        "header header"
         "nav main";
   }
   main {
@@ -485,19 +474,15 @@ main {
 
   /* Header */
 
-  .header {
-      padding: 10px;
-  }
-
   .profile-img {
     width: 60px;
-    height: 60px;
+    height: 50px;
     margin-left: 10px;
   }
 
   .profile-name {
-    font-size: 25px;
-    margin-left: 10px;
+    padding: 0 10px;
+    margin: auto;
   } 
 
   .your-app {
@@ -506,12 +491,10 @@ main {
   }
 
   .bell {
-    margin-top: 10px;
-    width: 35px;
-    height: 35px;
+    margin-top: 16px;
+    width: 40px;
+    height: 40px;
   }
-
-
 
   /* navigation side bar */
 
@@ -519,9 +502,8 @@ main {
     justify-content: flex-start;
     flex-direction: column;
     position: relative;
-    
     height: 100%;
-    width: 70px;
+    width: 55px;
   }
 
   .nav img {
@@ -532,69 +514,56 @@ main {
 
   /* Dashboard and Alert */
 
-  .alert-banner {
-      padding: 7px;
-  }
-
-  main {
-      
-  }
-
   .headline {
-    width: 15%;
-    padding: 20px;
-    font-size: 30px;
+    width: 22%;
+    font-size: 25px;
 }
 
   .main-header-search {
       width: 85%;
-      padding: 20px;
+      padding: 10px;
   }
 
   .main-header input {
     width: 40%;
-    height: 40px;
+    height: 30px;
   }
 
   /* social  */
-
-  .social-container {
-      
-  }
 
   .social-wrapper {
       display: flex;
       flex-direction: row;
   }
 
-  .social-text {
-      flex-direction: column;
-      margin-left: 15px;
-      padding: 0;
+  .social-container {
+      width: 33%;
+      margin-right: 10px;
   }
 
-  .social-image {
-      margin-left: 15px;
-      width: 45px;
-      height: 45px;
+  .social-text {
+      flex-direction: column;
+      margin-bottom: 10px;
   }
 
   .social-text p:nth-of-type(1) {
-      font-size: large;
+      font-size: 13px;
       margin-bottom: 0;
-      padding-left: 10px;
   }
 
   .social-text p:nth-of-type(2) {
-    padding: 0 0 10px 10px;
-    font-size: 50px;
+    padding-top: 0;
+    padding-left: 10px;
+    font-size: 30px;
   }
 
   /* Member and activity, message and user */
 
   .members-container,
   .activity-container {
-    padding: 10px 15px 15px 0; 
+    padding: 10px 15px 15px 0;
+    min-height: 90px;
+    max-height: 90px; 
 }
 
   .activity-container,
@@ -634,29 +603,23 @@ main {
 
   /* Charts */
 
-  .mobile {
-      
-  }
-
   .daily h3,
   .mobile h3 {
       padding-bottom: 15px;
   }
 
   .traffic {
-      padding-top: 15px;
-      padding-bottom: 15px;
+      padding: 15px 0 15px 0;
+  }
+  .daily,
+  .social,
+  .mobile {
+      padding-left: 0;
   }
 
-   .widget-container-full canvas {
-      min-width: 1000px;
-      min-height: 120px;
-  } 
-
-  .widget-container-half canvas{
-    min-width: 300px;
-    min-height: 90px;
-} 
+  .mobile h3 {
+      padding-left: 15px;
+  }
 
 }
 
@@ -664,19 +627,6 @@ main {
 
 @media (min-width: 1024px) {
 
-    /* .widget-container-full canvas {
-        min-width: 850px;
-        min-height: 270px;
-    }
-
-    .widget-container-half canvas{
-        min-width: 450px;
-        min-height: 170px;
-    } */
-
-    body {
-        max-width: 100%;
-    }
 }
 
 
