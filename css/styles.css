@@ -47,7 +47,7 @@ main {
 }
 
 .widget-container-full, .widget-container-half {
-    width: 95vw;
+    width: 92vw;
 }
 
 main {
@@ -101,7 +101,6 @@ main {
     border-radius: 50%;
     width: 30px;
     height: 30px;
-    padding: 0 5px;
     margin-top: 10px;
 }
 
@@ -119,7 +118,7 @@ main {
 .nav {
     display: flex;
     justify-content: center;
-    
+    margin-top: 55px;
     padding-top: 7px;
     height: 40px;
     width: 100%;
@@ -137,6 +136,7 @@ main {
 .main-header {
     display: flex;
     align-items: center;  
+    margin-top: 100px;
 }
 
 .headline {
@@ -229,10 +229,14 @@ main {
     border-radius: 5px;
 }
 
-.widget-container-full,
-.daily,
-.mobile {
+.widget-container-full {
     padding: 10px 0 15px 25px;
+}
+
+.daily,
+.mobile,
+.alert {
+    padding: 10px 0 15px 10px;
 }
 
 /* =========== Social Media Section =========== */
@@ -395,13 +399,16 @@ main {
     padding: 15px 0 25px 10px;
 }
 
-/* .btn-1,
+.btn-1,
 .btn-2 {
     display: flex;
     flex-direction: row-reverse;
-    margin-right: auto;
-    margin-left: 10px;
-}   */
+}  
+
+.checkbox {
+    max-height: 25px;
+    margin: auto;
+}
 
 .form-field {
     width: 85%; 
@@ -475,7 +482,7 @@ main {
   /* Header */
 
   .profile-img {
-    width: 60px;
+    width: 50px;
     height: 50px;
     margin-left: 10px;
   }
@@ -502,6 +509,7 @@ main {
     justify-content: flex-start;
     flex-direction: column;
     position: relative;
+    margin: 0;
     height: 100%;
     width: 55px;
   }
@@ -513,6 +521,10 @@ main {
   }
 
   /* Dashboard and Alert */
+
+  .main-header {
+      margin: 0;
+  }
 
   .headline {
     width: 22%;
