@@ -35,3 +35,63 @@ send.addEventListener('click', () => {
   }
 });
 
+// Dashboard Search Box
+
+
+
+// Local storage
+
+let settings = JSON.parse(localStorage.getItem('settings')) || [];
+const save = document.getElementById('save');
+const cancel = document.getElementById('cancel');
+const timezone = document.getElementById('timezone');
+const email = document.getElementById('email-notifications');
+const profile = document.getElementById('profile-settings');
+
+fillSettings(settings);
+
+// Save
+save.addEventListener('click', () => {
+  if (timezone.value === '') {
+    alert('Please select a Timezone')
+  } else {
+    localStorage.removeItem('settings');
+    settings = [];
+    const settingsEx = {
+      timeZone: timezone.options[timezone.selectedIndex].value,
+      emailCheck: email.checked,
+      profileCheck: profile.checked
+    };
+    settings.push(settingsEx);
+    storeSettings(settings);
+  }
+});
+
+// Cancel resets current settings
+cancel.addEventListener('click', () => {
+  localStorage.removeItem('settings');
+  settings = [];
+  fillSettings(settings);
+  save.innerHTML = 'SAVE'
+});
+
+// Store saved settings into LocalStorage
+function storeSettings(settings = []) {
+  localStorage.setItem('settings', JSON.stringify(settings));
+  alert('Your settings have been saved');
+  save.innerHTML = 'SAVED'
+}
+
+function fillSettings(settings = []) {
+  if (settings.length >=1) {
+    email.checked = settings[0].email;
+    profile.checked = settings[0].proflie;
+    timezone.value = settings[0].timeZone;
+  } else {
+    email.checked = false;
+    profile.checked = false;
+    timezone.value = '0';
+  }
+}
+// logging to console
+console.log(localStorage);

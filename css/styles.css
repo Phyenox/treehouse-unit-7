@@ -87,21 +87,52 @@ main {
     color: var(--base-color);
 }
 
-.bell {
+.bell-container {
     display: flex;
     flex-direction: row;
+    position: relative;
+}
+
+.bell {
+    margin-top: 10px;
     padding: 10px;
-    margin-top: 5px;
-    width: 20px;
-    height: 20px;
-    border-right: 1px solid var(--boarder-color); 
+    width: 40px;
+    height: 40px;
+    cursor: pointer; 
+}
+
+.bell:hover {
+    animation: shake .2s;
+    animation-iteration-count: 2;
+}
+@keyframes shake {
+  0% { transform: translate(0px, 0px) rotate(0deg); }
+  25% { transform: translate(1px,1px) rotate(1deg); }
+  50% { transform: translate(-1px, -1px) rotate(-1deg); }
+  75% { transform: translate(1px, 1px) rotate(1deg); }
+  100% { transform: translate(-1px, 1px) rotate(-1deg); }
+}
+
+.dot {
+    position: absolute;
+    height: 7px;
+    width: 7px;
+    background-color: lawngreen;
+    border-radius: 50%;
+    margin: 20px 0 0 20px;
+}
+
+.line {
+    border-left: 1px solid var(--boarder-color);
+    max-height: 40px;
+    margin-top: 7px;
 }
 
 .profile-img {
     border-radius: 50%;
     width: 30px;
     height: 30px;
-    margin-top: 10px;
+    margin: 10px 5px 0 5px;
 }
 
 .profile-name {
@@ -503,6 +534,15 @@ main {
     height: 40px;
   }
 
+  .dot {
+    margin: 25px 0 0 20px;
+  }
+
+  .line {
+    max-height: 50px;
+    margin-top: 10px;
+}
+
   /* navigation side bar */
 
   .nav {
@@ -638,7 +678,16 @@ main {
 /* =========== Media Query 1024px =========== */
 
 @media (min-width: 1024px) {
-
+    .bell {
+        margin-top: 16px;
+        width: 50px;
+        height: 50px;
+      }
+      .dot {
+        margin: 25px 0 0 25px;
+        width: 10px;
+        height: 10px;
+      }
 }
 
 
