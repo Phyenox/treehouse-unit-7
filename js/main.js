@@ -1,4 +1,4 @@
-//   Alert Banner
+//=============== Alert Banner ===================
 
 let alertBanner = document.getElementById("alert");
 
@@ -17,7 +17,7 @@ alertBanner.innerHTML =
   }
  });
 
-//  Form Field, Send message
+//=========== Form Field, Send message ===============
 
 const user = document.getElementById("userField");
 const message = document.getElementById("messageField");
@@ -35,11 +35,31 @@ send.addEventListener('click', () => {
   }
 });
 
-// Dashboard Search Box
+// ================== Bell icon Notification ============
+
+const bell = document.querySelector('.bell-icon');
+const popUp = document.querySelector('.pop-up');
+const close = document.querySelector('.close');
+popUp.style.display = 'none';
+
+// Can Toggle bell to open and close notification
+bell.addEventListener('click', () => {
+  if (popUp.style.display === 'none') {
+  popUp.style.display = 'block';
+  } else {
+    popUp.style.display = 'none'
+  }
+});
+
+// Close button
+close.addEventListener('click', () => {
+  popUp.style.display = 'none';
+});
 
 
 
-// Local storage
+
+// ===========  Local storage ==================
 
 let settings = JSON.parse(localStorage.getItem('settings')) || [];
 const save = document.getElementById('save');
@@ -78,7 +98,6 @@ cancel.addEventListener('click', () => {
 // Store saved settings into LocalStorage
 function storeSettings(settings = []) {
   localStorage.setItem('settings', JSON.stringify(settings));
-  alert('Your settings have been saved');
   save.innerHTML = 'SAVED'
 }
 

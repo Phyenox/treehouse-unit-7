@@ -26,6 +26,16 @@
         <img src="images/member-1.jpg" alt="Proflie picture" class="profile-img">
         <h3 class="profile-name">Sam Millar</h3>
       </div>
+      <!-- Dropdown Notifications -->
+    </div class="notification">
+      <ul class="pop-up">
+        <li><img src="images/member-4.jpg" alt="Profile picture" class="notification-img">You have a new message from Usopp!</li>
+        <li><img src="images/member-1.jpg" alt="Profile picture" class="notification-img">You have a message from Cassiopeia!</li>
+        <li><img src="images/member-3.jpg" alt="Profile picture" class="notification-img">You have a new message from Misa!</li>
+        <li><a href="#" class="close">x</a></li>
+      </ul>
+    <div>
+
     </div>
   </header>
 
@@ -234,7 +244,13 @@
       <h3>Message User</h3>
 
       <form class="widget-container">
-        <input type="text" placeholder="Search for user" class="form-field" id="userField">
+        <input type="text" placeholder="Search for user" class="form-field" id="userField" list="datalist-list">
+        <datalist id="datalist-list">
+          <option value="Astro Boy">
+          <option value="Cassiopeia Stars">
+          <option value="Misa Amame">
+          <option value="Usopp Sniper">
+        </datalist>
         <textarea placeholder="Message for user" class="form-area" id="messageField"></textarea>
         <button class="button-primary" id="send">Send</button>
       </form>
