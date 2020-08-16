@@ -204,7 +204,7 @@ main {
 
 .headline {
     text-transform: none;
-    font-size: 20px;
+    font-size: 18px;
     width: 30%;
     margin: 0;
     padding: 10px;
@@ -265,20 +265,18 @@ main {
 .traffic {
     display: flex;
     flex-direction: row;
-    padding-left: 10px;
-    
+    margin-left: 10px;
 }
 
 .traffic-nav {
     display: flex;
     flex-direction: row;
     margin-left: auto;
-    padding-right: 10px;
     list-style-type: none;
 }
 
 .traffic-nav-link {
-  padding: 5px;
+  margin: 5px;
   cursor: pointer;
 }
 

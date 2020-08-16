@@ -56,9 +56,6 @@ close.addEventListener('click', () => {
   popUp.style.display = 'none';
 });
 
-
-
-
 // ===========  Local storage ==================
 
 let settings = JSON.parse(localStorage.getItem('settings')) || [];
