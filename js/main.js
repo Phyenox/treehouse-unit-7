@@ -100,8 +100,8 @@ function storeSettings(settings = []) {
 
 function fillSettings(settings = []) {
   if (settings.length >=1) {
-    email.checked = settings[0].email;
-    profile.checked = settings[0].proflie;
+    email.checked = settings[0].emailCheck;
+    profile.checked = settings[0].profileCheck;
     timezone.value = settings[0].timeZone;
   } else {
     email.checked = false;
